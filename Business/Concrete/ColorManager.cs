@@ -7,16 +7,16 @@ using System.Text;
 
 namespace Business.Concrete
 {
-   public class ICarManager : ICarServices
+    public class ColorManager : IColorServices
     {
-        ICarDal _carDal;
-        public ICarManager(ICarDal carDal)
+        IColorDal _colorDal;
+        public ColorManager(IColorDal colorDal)
         {
-            _carDal = carDal;
+            _colorDal = colorDal;
         }
-        public List<Car> GetAll()
+        public List<Color> GetAll()
         {
-            return _carDal.GetAll();   
+            return _colorDal.GetAll();
         }
     }
 }

@@ -8,6 +8,7 @@ namespace IEntities.Concrete
     //Id, BrandId, ColorId, ModelYear, DailyPrice, Description
     public class Car:IEntity
     {
+        // ürün Özelliklerini yazıyoruz.
         public int Id { get; set; }
         public int BrandId { get; set; }
         public int ColorId { get; set; }
