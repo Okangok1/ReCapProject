@@ -1,20 +1,19 @@
-﻿using Core.Entities;
+﻿using Core;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace IEntities.Concrete
+namespace IEntities.DTOs
 {
-    //Id, BrandId, ColorId, ModelYear, DailyPrice, Description
-    public class Car:IEntity
+    public class CarDetailDto:IDto
     {
-        // ürün Özelliklerini yazıyoruz.
-        public int Id { get; set; }
+        public int CarId { get; set; }
         public int BrandId { get; set; }
         public int ColorId { get; set; }
-        
         public string ModelYear { get; set; }
         public decimal DailyPrice { get; set; }
         public string Description { get; set; }
+        public string BrandName { get; set; }
+        public string ColorName { get; set; }
     }
 }
