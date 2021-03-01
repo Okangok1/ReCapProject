@@ -10,31 +10,29 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            //GeçiçiVeriTabanıÇalıştır();
+         
 
             //RandomCars();
 
-            //CarName, BrandName, ColorName, DailyPrice.
-
-            BrandManager brandManager = new BrandManager(new EfBrandDal());
-            foreach (var brand in brandManager.GetAll())
-            {
-                Console.WriteLine(brand.Name);
-            }
-
-            ColorManager colorManager = new ColorManager(new EfColorDal());
-            foreach (var color in colorManager.GetAll())
-            {
-                Console.WriteLine(color.Name);
-            }
+           
 
             CarManager carManager = new CarManager(new EfCarDal());
-            foreach (var colorId in carManager.GetCarsByColorId(2))
+            var result = carManager.GetCarDetails();
+            if (result.Success==true)
             {
-                Console.WriteLine(colorId.Description);
+                foreach (var car in result.Data)
+                {
+                    Console.WriteLine(car.DailyPrice);
+                }
+            }
+            else
+            {
+                Console.WriteLine(result.Message);
             }
 
+
         }
+
 
         private static void RandomCars()
         {
@@ -60,14 +58,6 @@ namespace ConsoleUI
             }
         }
 
-        private static void GeçiçiVeriTabanıÇalıştır()
-        {
-            CarManager carManager = new CarManager(new InMemoryCarDal());
-
-            foreach (var car in carManager.GetAll())
-            {
-                Console.WriteLine("Model yılı : " + car.ModelYear + "  Fiyat : " + car.DailyPrice + "    Açıklama : " + car.Description);
-            }
-        }
+        
     }
 }

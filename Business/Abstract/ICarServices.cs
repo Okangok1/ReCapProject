@@ -1,4 +1,6 @@
-﻿using IEntities.Concrete;
+﻿using Business.Utilities.Results;
+using IEntities.Concrete;
+using IEntities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,13 +11,18 @@ namespace Business.Abstract
     {
 
         //GetCarsByBrandId , GetCarsByColorId
-        List<Car> GetAll();
+       IDataResult<List<Car>> GetAll();
 
-        List<Car> GetCarsByBrandId(int Id);
+        IDataResult<List <Car>> GetCarsByBrandId(int Id);
 
-        List<Car> GetCarsByColorId(int ColorId);
+       IDataResult <List<Car>> GetCarsByColorId(int ColorId);
+        IDataResult<List<CarDetailDto>> GetCarDetails();
 
-         void Add(Car car);
+
+         IResult Add(Car car);
+       
+        IResult Delete(Car car);
+        IResult Update(Car car);
 
     }
 }
