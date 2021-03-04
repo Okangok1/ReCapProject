@@ -27,7 +27,7 @@ namespace Business.Constants
         public static string ColorDeleted="Renk silindi";
         public static string ColorUpdatedFailed="Renk güncelleme başarısız oldu";
         public static string ColorUpdated="Renk güncellendi";
-        internal static string RentalAdded;
+        internal static string RentalAdded="eklendi";
         internal static string RentalDeleted;
         internal static string RentalUpdated;
         internal static string RentalUpdatedInvalid;
@@ -37,5 +37,7 @@ namespace Business.Constants
         internal static string UserUpdate;
         internal static string CustemerCompanyNameInvalid;
         internal static string CustomerUpdated;
+        internal static string CustomerAdded;
+        internal static string CustomerDeleted;
     }
 }

@@ -15,6 +15,7 @@ namespace Business.Concrete
         public RentalManager(IRentalDal rentalDal)
         {
             _rentalDal = rentalDal;
+
         }
         public IResult Add(Rental rental)
         {

@@ -14,21 +14,33 @@ namespace ConsoleUI
 
             //RandomCars();
 
-           
-
-            CarManager carManager = new CarManager(new EfCarDal());
-            var result = carManager.GetCarDetails();
-            if (result.Success==true)
-            {
-                foreach (var car in result.Data)
+           RentalManager rentalManager=new RentalManager(new EfRentalDal());
+            var result2 = rentalManager.Add(
+                new Rental
                 {
-                    Console.WriteLine(car.DailyPrice);
-                }
-            }
-            else
-            {
-                Console.WriteLine(result.Message);
-            }
+                    CarId = 1,
+                    CustomerId = 1,
+                    RentalId=2,
+                    RentalName="kiralık araç",
+                    RentDate=DateTime.Now,
+                    ReturnDate= new DateTime ( 2020 , 4, 15)
+
+                });
+            Console.WriteLine(result2.Message);
+
+            //CarManager carManager = new CarManager(new EfCarDal());
+            //var result = carManager.GetCarDetails();
+            //if (result.Success==true)
+            //{
+            //    foreach (var car in result.Data)
+            //    {
+            //        Console.WriteLine(car.DailyPrice);
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine(result.Message);
+            //}
 
 
         }
