@@ -23,9 +23,19 @@ namespace Business.Constants
         public static string BrandUpdatedFailed = "marka güncelleme islemi başarısız oldu";
         public static string ColorAdded = "renk eklendi";
         public static string ColorNameInvalid = "renk ismi geçersiz";
-        internal static string ColorDeletedfailed;
-        internal static string ColorDeleted;
-        internal static string ColorUpdatedFailed;
-        internal static string ColorUpdated;
+        public static string ColorDeletedfailed= "renk silme islemi basarısız oldu";
+        public static string ColorDeleted="Renk silindi";
+        public static string ColorUpdatedFailed="Renk güncelleme başarısız oldu";
+        public static string ColorUpdated="Renk güncellendi";
+        internal static string RentalAdded;
+        internal static string RentalDeleted;
+        internal static string RentalUpdated;
+        internal static string RentalUpdatedInvalid;
+        internal static string UserAdded;
+        internal static string UserDeleted;
+        internal static string UserUpdatedInvalid;
+        internal static string UserUpdate;
+        internal static string CustemerCompanyNameInvalid;
+        internal static string CustomerUpdated;
     }
 }
